@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index
-    render text: "Todos"
+    render template: "todos/index"
   end
 end
 
