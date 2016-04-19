@@ -1,2 +1,6 @@
 <h1>Tâches à faire</h1>
-<%= @todo %>
+<ul>
+  <% @todos.each do |todo| %>
+    <li><%= todo %></li>
+  <% end %>
+</ul>

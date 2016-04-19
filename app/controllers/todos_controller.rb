@@ -1,6 +1,8 @@
 class TodosController < ApplicationController
   def index
-    @todo = "Faire les courses"
+    @todos = ["Faire les courses",
+              "Payer les impôts",
+              "Coder une appli Rails"]
   end
 end
 
