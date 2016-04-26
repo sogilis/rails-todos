@@ -5,5 +5,9 @@ class TodosController < ActionController::Base
 
   def new
   end
-end
 
+  def create
+    todo = Todo.create! params.permit(:description)
+    redirect_to "/todos"
+  end
+end
