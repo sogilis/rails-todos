@@ -1,6 +1,5 @@
 <h1>Nouvelle tâche</h1>
-
-<form method="POST" action="<%= todos_path %>">
+<%= form_tag todos_path do %>
   <fieldset>
     <label for="todo_description">Description</label>
     <input type="text"
@@ -14,4 +13,4 @@
     ou
     <%= link_to "annuler", todos_path %>
   </p>
-</form>
+<% end %>
