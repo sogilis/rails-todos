@@ -1,0 +1,17 @@
+<h1>Nouvelle tâche</h1>
+
+<form method="POST" action="/todos">
+  <fieldset>
+    <label for="todo_description">Description</label>
+    <input type="text"
+           id="todo_description"
+           name="description"
+           value=""
+           autofocus />
+  </fieldset>
+  <p>
+    <input type="submit" value="Ajouter cette tâche">
+    ou
+    <a href="/todos">annuler</a>
+  </p>
+</form>
