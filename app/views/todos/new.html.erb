@@ -1,6 +1,6 @@
 <h1>Nouvelle tâche</h1>
 
-<form method="POST" action="/todos">
+<form method="POST" action="<%= todos_path %>">
   <fieldset>
     <label for="todo_description">Description</label>
     <input type="text"
@@ -12,6 +12,6 @@
   <p>
     <input type="submit" value="Ajouter cette tâche">
     ou
-    <a href="/todos">annuler</a>
+    <a href="<%= todos_path %>">annuler</a>
   </p>
 </form>

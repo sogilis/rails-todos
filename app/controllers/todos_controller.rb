@@ -8,6 +8,6 @@ class TodosController < ActionController::Base
 
   def create
     todo = Todo.create! params.permit(:description)
-    redirect_to "/todos"
+    redirect_to todos_url
   end
 end
