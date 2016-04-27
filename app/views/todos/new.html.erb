@@ -1,12 +1,9 @@
 <h1>Nouvelle tâche</h1>
 <%= form_tag todos_path do %>
   <fieldset>
-    <label for="todo_description">Description</label>
-    <input type="text"
-           id="todo_description"
-           name="description"
-           value=""
-           autofocus />
+    <%= label_tag :description, "Description" %>
+    <%= text_field_tag :description, @todo.description, autofocus: true %>
+    <strong><%= @todo.errors[:description].to_sentence %></strong>
   </fieldset>
   <p>
     <input type="submit" value="Ajouter cette tâche">

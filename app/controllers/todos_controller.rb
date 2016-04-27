@@ -4,10 +4,16 @@ class TodosController < ActionController::Base
   end
 
   def new
+    @todo = Todo.new
   end
 
   def create
-    todo = Todo.create! params.permit(:description)
-    redirect_to todos_url
+    @todo = Todo.new(params.permit(:description))
+
+    if @todo.save
+      redirect_to todos_url
+    else
+      render :new
+    end
   end
 end
