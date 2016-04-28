@@ -14,7 +14,9 @@
 ActiveRecord::Schema.define(version: 1) do
 
   create_table "todos", force: :cascade do |t|
-    t.text "description"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

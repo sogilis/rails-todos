@@ -6,7 +6,7 @@
     <strong><%= @todo.errors[:description].to_sentence %></strong>
   </fieldset>
   <p>
-    <input type="submit" value="Ajouter cette tâche">
+    <%= submit_tag "Ajouter cette tâche" %>
     ou
     <%= link_to "annuler", todos_path %>
   </p>
