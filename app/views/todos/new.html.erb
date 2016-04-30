@@ -1,16 +1,16 @@
 <h1>Nouvelle tâche</h1>
-<%= form_tag todos_path do %>
+<%= form_for @todo do |f| %>
   <p>
-    <%= label_tag :description %>
-    <%= text_field_tag :description, @todo.description, autofocus: true %>
+    <%= f.label :description %>
+    <%= f.text_field :description, autofocus: true %>
     <strong><%= @todo.errors[:description].to_sentence %></strong>
   </p>
   <p>
-    <%= label_tag :notes %>
-    <%= text_area_tag :notes, @todo.notes, rows: 20, cols: 80 %>
+    <%= f.label :notes %>
+    <%= f.text_area :notes, rows: 20, cols: 80 %>
   </p>
   <p>
-    <%= submit_tag "Ajouter cette tâche" %>
+    <%= f.submit "Ajouter cette tâche" %>
     ou
     <%= link_to "annuler", todos_path %>
   </p>
