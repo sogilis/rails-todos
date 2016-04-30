@@ -8,7 +8,8 @@ class TodosController < ActionController::Base
   end
 
   def create
-    @todo = Todo.new(description: params[:description])
+    @todo = Todo.new(description: params[:description],
+                     notes: params[:notes])
 
     if @todo.save
       redirect_to todos_url
