@@ -1,7 +1,7 @@
 class CreateTodos < ActiveRecord::Migration
-  def up
+  def change
     create_table :todos do |t|
-      t.text :description
+      t.string :description
       t.timestamps
     end
   end
