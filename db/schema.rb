@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "todos", force: :cascade do |t|
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "notes"
   end
 
 end
