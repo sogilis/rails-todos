@@ -2,7 +2,7 @@
 <ul>
   <% @todos.each do |todo| %>
     <li>
-      <%= link_to todo.description, todo_path(todo) %>
+      <%= link_to todo.description, todo %>
     </li>
   <% end %>
 </ul>

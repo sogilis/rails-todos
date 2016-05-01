@@ -27,7 +27,7 @@ class TodosController < ActionController::Base
 
   def update
     if @todo.update_attributes(todo_params)
-      redirect_to todo_path(@todo)
+      redirect_to @todo
     else
       render :edit
     end
@@ -45,6 +45,6 @@ private
   end
 
   def todo_params
-    {description: params[:description], notes: params[:notes]}
+    params.require(:todo).permit(:description, :notes)
   end
 end

@@ -6,8 +6,8 @@
   <% end %>
 </p>
 <p>
-  <%= link_to 'Modifier', edit_todo_path(@todo) %>
+  <%= link_to 'Modifier', [:edit, @todo] %>
 </p>
-<%= form_tag todo_path(@todo), method: :delete do %>
+<%= form_tag @todo, method: :delete do %>
   <%= submit_tag 'Supprimer' %>
 <% end %>
