@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "notes"
+    t.text     "notes",       default: "", null: false
   end
 
 end
