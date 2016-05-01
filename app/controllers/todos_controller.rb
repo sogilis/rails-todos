@@ -1,4 +1,6 @@
 class TodosController < ActionController::Base
+  before_action :assign_todo, except: %i(index new create)
+
   def index
     @todos = Todo.all
   end
@@ -18,16 +20,12 @@ class TodosController < ActionController::Base
   end
 
   def show
-    @todo = Todo.find(params[:id])
   end
 
   def edit
-    @todo = Todo.find(params[:id])
   end
 
   def update
-    @todo = Todo.find(params[:id])
-
     if @todo.update_attributes(todo_params)
       redirect_to @todo
     else
@@ -35,7 +33,11 @@ class TodosController < ActionController::Base
     end
   end
 
-  private
+private
+
+  def assign_todo
+    @todo = Todo.find(params[:id])
+  end
 
   def todo_params
     {description: params[:description], notes: params[:notes]}
