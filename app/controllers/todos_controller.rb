@@ -38,6 +38,6 @@ class TodosController < ActionController::Base
   private
 
   def todo_params
-    params.require(:todo).permit(:description, :notes)
+    {description: params[:description], notes: params[:notes]}
   end
 end
