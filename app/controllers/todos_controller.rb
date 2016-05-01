@@ -33,6 +33,11 @@ class TodosController < ActionController::Base
     end
   end
 
+  def destroy
+    @todo.destroy
+    redirect_to todos_url
+  end
+
 private
 
   def assign_todo
