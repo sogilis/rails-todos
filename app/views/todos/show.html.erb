@@ -1,4 +1,8 @@
+<%= link_to "Tâches à faire", todos_path %>
 <h1><%= @todo.description %></h1>
 <p>
-  <%= @todo.notes %>
+  <% @todo.notes.each_line do |line| %>
+    <%= line %><br>
+  <% end %>
 </p>
+<%= link_to 'Modifier', edit_todo_path(@todo) %>

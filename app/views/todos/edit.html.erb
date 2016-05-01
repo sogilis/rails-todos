@@ -1,0 +1,18 @@
+<h1>Édition : <%= @todo.description %></h1>
+
+<%= form_for @todo do |f| %>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description, autofocus: true %>
+    <strong><%= @todo.errors[:description].to_sentence %></strong>
+  </p>
+  <p>
+    <%= f.label :notes %>
+    <%= f.text_area :notes, rows: 20, cols: 80 %>
+  </p>
+  <p>
+    <%= f.submit "Enregistrer les modifications" %>
+    ou
+    <%= link_to "annuler", @todo %>
+  </p>
+<% end %>

@@ -21,6 +21,20 @@ class TodosController < ActionController::Base
     @todo = Todo.find(params[:id])
   end
 
+  def edit
+    @todo = Todo.find(params[:id])
+  end
+
+  def update
+    @todo = Todo.find(params[:id])
+
+    if @todo.update_attributes(todo_params)
+      redirect_to @todo
+    else
+      render :edit
+    end
+  end
+
   private
 
   def todo_params
