@@ -7,7 +7,7 @@
 </p>
 <p>
   <%= link_to 'Modifier', [:edit, @todo] %>
+  ou
+  <%= link_to 'supprimer', @todo, method: :delete,
+                                  data: {confirm: "Supprimer cette tâche ?"} %>
 </p>
-<%= form_tag @todo, method: :delete do %>
-  <%= submit_tag 'Supprimer' %>
-<% end %>
