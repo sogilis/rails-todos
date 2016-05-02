@@ -1,4 +1,4 @@
-<%= link_to "Tâches à faire", todos_path %>
+
 <h1><%= @todo.description %></h1>
 <p>
   <% @todo.notes.each_line do |line| %>
@@ -6,8 +6,12 @@
   <% end %>
 </p>
 <p>
-  <%= link_to 'Modifier', [:edit, @todo] %>
-  ou
-  <%= link_to 'supprimer', @todo, method: :delete,
-                                  data: {confirm: "Supprimer cette tâche ?"} %>
+  <strong>
+    <%= link_to 'Modifier', [:edit, @todo] %>
+  </strong>
+  <small>
+    ou
+    <%= link_to 'supprimer', @todo, method: :delete,
+                                    data: {confirm: "Supprimer cette tâche ?"} %>
+  </small>
 </p>
