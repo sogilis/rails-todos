@@ -1,3 +1,3 @@
-class Todo < ActiveRecord::Base
+class Todo < ApplicationRecord
   validates :description, presence: true
 end

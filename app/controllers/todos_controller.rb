@@ -1,4 +1,4 @@
-class TodosController < ActionController::Base
+class TodosController < ApplicationController
   before_action :assign_todo, except: %i(index new create)
 
   def index
